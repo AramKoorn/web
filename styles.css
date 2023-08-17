@@ -6,6 +6,10 @@ body, h1, h2, h3, p, ul, li {
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0; /* Reset body margin */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the body takes at least the full viewport height */
 }
 
 .container {
@@ -35,7 +39,7 @@ nav ul li a {
 }
 
 .section {
-    padding: 60px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
@@ -49,5 +53,19 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    
+    /* Sticky footer properties */
+    margin-top: auto; /* Push the footer to the bottom of the container */
+    flex-shrink: 0; /* Prevent the footer from shrinking */
 }
 
+.centered-list {
+    text-align: center; /* Center-align the list items */
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.centered-list li {
+    display: inline-block; /* Display list items in a row */
+    margin: 0 10px; /* Add some spacing between list items */
+}
